@@ -1,0 +1,32 @@
+.container-fluid {
+	padding-right: 2%; 
+	padding-left: 2%;
+}
+table {
+	padding-right: 2%; 
+	padding-left: 2%;
+}
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.top {
+	display: inline-block;
+	border-left: 30px
+}
+
+.voteproject {
+	display: inline-block;
+	padding: 15px;
+	float:right
+}
+
+h4{
+	display: inline-block;
+}

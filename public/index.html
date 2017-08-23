@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Signin</title>
+    <meta charset="UTF-8">
+    <meta name="description" content = "Tenx-Hackday --- grading">
+    <meta name="keywords" content ="Tenx，Hackday, Grading">
+    <meta name="author" content ="CS490">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="src/icon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/index.css" />
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+	<script type="text/javascript" src="js/leanModal.js"></script>
+	<script type="text/javascript" src="js/getparameter.js"></script>
+
+<body>
+<div class="container">
+    <script>
+    if(get('err')){
+        alert(get('err').replace(/_/g," "));
+    }
+    </script>
+	<img class="img-responsive" src="hackathon.png" alt="hackathon" width="1837" height="719">
+	<a id="modal_trigger" href="#signin" class="btn">Sign In</a>
+
+	<div id="signin" class="popupContainer" style="display:none;">
+		<header class="popupHeader">
+			<span class="header_title">Login</span>
+			<span class="modal_close"><i class="fa fa-times"></i></span>
+		</header>
+		
+		<section class="popupBody">
+			<!-- Social Login -->
+			<div class="user_login">
+
+				<div class="centeredText">
+					<span>Enter Your Email address and We will send your a magic link</span>
+				</div>
+
+				<form action="/logprocess" method="GET">
+					<label>Email</label><span><script>document.write(get('err'));</script></span>
+					<input type="email" name="email">
+				<br />
+					<div class="checkbox">
+      					<label><input id="role" name="role" type="checkbox" value="J">I am a Judge or Admin</label>
+    				</div>
+
+					<div class="action_btns">
+						<div class="one_half last"><input id="login" type="submit" value ="Login"><div>
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+	$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+    </script>
+</div>
+
+
+
+</body>
+</html>
+

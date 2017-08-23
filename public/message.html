@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Message</title>
+    <meta charset="UTF-8">
+    <meta name="description" content = "Tenx-Hackday --- grading">
+    <meta name="keywords" content ="Tenx，Hackday, Grading">
+    <meta name="author" content ="CS490">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="src/icon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/index.css" />
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+	<script type="text/javascript" src="js/leanModal.js"></script>
+	<script type="text/javascript" src="js/getparameter.js"></script>
+
+<body>
+
+<div class="container">
+	<h2 id="title"></h2>
+	<div class="well" id="body"></div>
+</div>
+
+	<script>
+		function redirect(url) {
+    		window.location=url;
+		}
+
+		if(get('err')){
+			document.getElementById("title").innerHTML = "Here is an err:";
+			document.getElementById("body").innerHTML = get('err').replace(/_/g," ");
+		    if(get('err')=="grading_table_is_currently_unavailble_or_already_did_grade"){
+				document.getElementById("body").innerHTML = get('err').replace(/_/g," ") + "<br><a href=\"/hackathon.html?email=hierifer@hotmail.com\"> Back to Hackathon</a>"
+			}
+		}else if(get('mes')){
+			document.getElementById("title").innerHTML = "Here is an Message:";
+			document.getElementById("body").innerHTML = get('mes').replace(/_/g," ");
+			if(get('mes')=="submit_successfully!"){
+				document.getElementById("body").innerHTML = get('mes').replace(/_/g," ") + "<br><a href=\"/hackathon.html?email=hierifer@hotmail.com\"> Back to Hackathon</a>"
+			}
+		}
+	</script>
+
+</body>
+</html>

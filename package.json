@@ -1,0 +1,22 @@
+{
+  "name": "Demo",
+  "author": "CS490",
+  "license": "ISC",
+  "version": "1.0.0",
+  "keyword" : "Tenx Hackday",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "mysql": "^2.11.1",
+    "nodemailer": "^2.6.4",
+    "cookie-parser": "^1.4.3",
+    "whatwg-fetch": "^2.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "style-loader": "^0.13.1"
+  }
+}

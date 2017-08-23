@@ -1,0 +1,38 @@
+<style>
+body {
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+}
+.AdminView-title {
+  font-size: 24px;
+  padding: 0 24px;
+}
+.AdminView-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #f0f0f0;
+}
+.AdminForm {
+  padding: 8px 24px;
+}
+.AdminForm > input{
+  display: block;
+  width: 300px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  border: 1px solid #888;
+  font-size: 14px;
+}
+.AdminForm > textarea {
+  display: block;
+  width: 300px;
+  height: 200px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  border: 1px solid #888;
+  font-size: 14px;
+}
+</style>
